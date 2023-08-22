@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SofiaFrikina/react-mesto-auth.git/static/css/main.f468f41e.css",
-    "main.js": "/SofiaFrikina/react-mesto-auth.git/static/js/main.ba268f1d.js",
+    "main.js": "/SofiaFrikina/react-mesto-auth.git/static/js/main.b1c7f583.js",
     "static/js/787.2df4b1c8.chunk.js": "/SofiaFrikina/react-mesto-auth.git/static/js/787.2df4b1c8.chunk.js",
     "static/media/Inter-Medium.woff": "/SofiaFrikina/react-mesto-auth.git/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/SofiaFrikina/react-mesto-auth.git/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -21,11 +21,11 @@
     "static/media/close.svg": "/SofiaFrikina/react-mesto-auth.git/static/media/close.2ceb783afbab75916ddc.svg",
     "static/media/plus.svg": "/SofiaFrikina/react-mesto-auth.git/static/media/plus.d86bb2edc2f6eadb96b7.svg",
     "main.f468f41e.css.map": "/SofiaFrikina/react-mesto-auth.git/static/css/main.f468f41e.css.map",
-    "main.ba268f1d.js.map": "/SofiaFrikina/react-mesto-auth.git/static/js/main.ba268f1d.js.map",
+    "main.b1c7f583.js.map": "/SofiaFrikina/react-mesto-auth.git/static/js/main.b1c7f583.js.map",
     "787.2df4b1c8.chunk.js.map": "/SofiaFrikina/react-mesto-auth.git/static/js/787.2df4b1c8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f468f41e.css",
-    "static/js/main.ba268f1d.js"
+    "static/js/main.b1c7f583.js"
   ]
 }
