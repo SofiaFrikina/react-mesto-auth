@@ -13,3 +13,11 @@
     padding-bottom: 10px;
     background-color: transparent;
 }
+
+@media screen and (max-width: 320px) {
+    .authorization__input {
+        font-weight: 400;
+        min-width: 260px;
+        padding-bottom: 13px;
+    }
+}

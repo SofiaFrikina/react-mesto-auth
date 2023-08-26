@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co/';
+export const BASE_URL = 'https://auth.nomoreparties.co';
 
 function checkResponse(res) {
     if (res.ok) {
@@ -34,7 +34,7 @@ export const authorize = (password, email) => {
         })
 };
 export const checkToken = (token) => {
-    return fetch(`${BASE_URL}/users/me`, {
+    return fetch(`${BASE_URL}/user/me`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

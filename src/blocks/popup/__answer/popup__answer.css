@@ -10,3 +10,14 @@
     line-height: normal;
     
 }
+
+@media screen and (max-width: 320px) {
+    .popup__answer {
+        margin-top: 40px;
+        
+        
+    }
+}
+
+
+

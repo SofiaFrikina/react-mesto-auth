@@ -159,10 +159,16 @@ function App() {
     setSelectedCard(null);
     setInfoTooltipOpen(false);
   }
+  function onSignOut() {
+    localStorage.removeItem('jwt');
+    setLoggedIn(false);
+    setUserEmail('');
+    navigate('/sign-in')
+  }
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        <Header userEmail={userEmail} />
+        <Header userEmail={userEmail} onSignOut={onSignOut} />
         <Routes>
           <Route path="/sign-up" element={<Register onRegister={handleRegister} />} />
           <Route path="/sign-in" element={<Login onLogin={handleLogin} />} />
@@ -176,8 +182,8 @@ function App() {
             cards={cards}
             onCardLike={handleCardLike}
             onCardDelete={handleCardDelete} />} />
-        </Routes>
 
+        </Routes>
         <Footer />
         <EditProfilePopup
           isOpen={isEditProfilePopupOpen}
