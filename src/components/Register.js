@@ -25,11 +25,11 @@ function Register({ onRegister }) {
                 <h1 className="authorization__title">Регистрация</h1>
                 <form className="authorization__form" onSubmit={handleSubmit}>
                     <div className="authorization__label">
-                        <input onChange={handleEmailChange} type="email" placeholder="Email" className="authorization__input authorization__input_type_email" id="email-input" minLength="2" maxLength="40" required />
+                        <input value={email} onChange={handleEmailChange} type="email" placeholder="Email" className="authorization__input authorization__input_type_email" id="email-input" minLength="2" maxLength="40" required />
                         <span className="authorization__text-error email-input-error"></span>
                     </div>
                     <div className="authorization__label">
-                        <input onChange={handlePasswordChange} type="password" placeholder="Пароль" className="authorization__input authorization__input_type_password" id="password-input" minLength="2" maxLength="200" required />
+                        <input value={password} onChange={handlePasswordChange} type="password" placeholder="Пароль" className="authorization__input authorization__input_type_password" id="password-input" minLength="2" maxLength="200" required />
                         <span className="authorization__text-error password-input-error"></span>
                     </div>
                     <button type="submit" className="authorization__button">Зарегистрироваться</button>
