@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
     .header__elements_active {
         border-bottom: 1px solid rgb(84, 84, 84, 0.7);
         display: flex;
