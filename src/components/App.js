@@ -44,10 +44,11 @@ function App() {
 
   React.useEffect(() => {
     handleTokenCheck();
-  })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function handleRegister(email, password) {
-    register(password, email)
+    register(email, password)
       .then((res) => {
         setInfoTooltipOpen(true)
         if (res) {
@@ -62,7 +63,7 @@ function App() {
   }
 
   function handleLogin(email, password) {
-    authorize(password, email)
+    authorize(email, password)
       .then((res) => {
         if (res) {
           setLoggedIn(true);
@@ -77,15 +78,13 @@ function App() {
       })
   }
 
-
-
   function handleTokenCheck() {
     const jwt = localStorage.getItem('jwt');
     if (jwt) {
       checkToken(jwt)
-        .then((res) => {
+        .then((data) => {
           setLoggedIn(true)
-          setUserEmail(res.data.email)
+          setUserEmail(data.email)
           navigate('/', { replace: true })
         })
         .catch((err) => console.log(err))
@@ -118,8 +117,8 @@ function App() {
     }).catch((err) => console.log(err))
   }
 
-  function handleUpdateUser(data) {
-    api.editUserInfo(data)
+  function handleUpdateUser() {
+    api.editUserInfo()
       .then((newUser) => {
         setCurrentUser(newUser);
         closeAllPopups();
