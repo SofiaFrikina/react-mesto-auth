@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.sofia.frikina.nomoredomainsrocks.ru';
+export const BASE_URL = 'https://auth.nomoreparties.co';
 
 function checkResponse(res) {
     if (res.ok) {
@@ -7,31 +7,27 @@ function checkResponse(res) {
     return Promise.reject(`Ошибка ${res.status}`);
 }
 
-export const register = (email, password) => {
+export const register = (password, email) => {
     return fetch(`${BASE_URL}/signup`, {
         method: 'POST',
         headers: {
+            'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            "password": password,
-            "email": email
-        }),
+        body: JSON.stringify({ password, email })
     })
         .then((res) => {
             return checkResponse(res);
         })
 };
-export const authorize = (email, password) => {
+export const authorize = (password, email) => {
     return fetch(`${BASE_URL}/signin`, {
         method: 'POST',
         headers: {
+            'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            "password": password,
-            "email": email
-        }),
+        body: JSON.stringify({ password, email })
     })
         .then((res) => {
             return checkResponse(res);
@@ -42,7 +38,7 @@ export const checkToken = (token) => {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'authorization': `Bearer ${token}`,
+            'Authorization': `Bearer ${token}`,
         }
     })
         .then((res) => {

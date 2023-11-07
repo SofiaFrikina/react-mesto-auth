@@ -15,15 +15,19 @@ class Api {
     };
     getUserInfo() {
         return fetch(`${this._url}/users/me`, {
-            method: 'GET',
-            headers: this._headers
+            headers: {
+                method: 'GET',
+                authorization: this._authorization
+            }
         })
             .then(this._handleResponse)
     };
     getCards() {
         return fetch(`${this._url}/cards`, {
-            method: 'GET',
-            headers: this._headers
+            headers: {
+                method: 'GET',
+                authorization: this._authorization
+            }
         })
             .then(this._handleResponse)
     };
@@ -84,7 +88,7 @@ class Api {
 }
 
 const api = new Api({
-    url: 'https://api.sofia.frikina.nomoredomainsrocks.ru',
+    url: 'https://mesto.nomoreparties.co/v1/cohort-70',
     headers: {
         authorization: 'c6851ead-6953-413a-a6ee-14ef0893ecb7',
         'Content-Type': 'application/json'
